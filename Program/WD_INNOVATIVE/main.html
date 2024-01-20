@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="UTF-8"> 
+	<title>Emotion Based music </title>
+	<script type="text/javascript" src="/eel.js"></script>
+	<link rel="stylesheet" type="text/css" href="header.css">
+	<link rel="stylesheet" type="text/css" href="background.css">
+	<link rel="stylesheet" type="text/css" href="player.css">
+	<link rel="icon" type="image/png" href="./bg/icon.png">
+	<style>
+	body{
+		margin: 0;
+	}
+	</style>
+	<style>
+      body {
+        background-image: url('./im/1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: changeBgImage 500s linear infinite;
+      }
+
+      @keyframes changeBgImage {
+        0% {
+          background-image: url('./im/1.jpg');
+        }
+        10% {
+          background-image: url('./im/2.jpg');
+        }
+        20% {
+          background-image: url('./im/3.jpg');
+        }
+        30% {
+          background-image: url('./im/4.jpg');
+        }
+        40% {
+          background-image: url('./im/5.jpg');
+        }
+		50% {
+          background-image: url('./im/6.jpg');
+        }
+		60% {
+          background-image: url('./im/7.jpg');
+        }
+		70% {
+          background-image: url('./im/8.jpg');
+        }
+		850% {
+          background-image: url('./im/9.jpg');
+        }
+		100% {
+          background-image: url('./im/10.jpg');
+        }
+      }
+	   
+    </style>
+	
+	
+	
+</head>
+
+
+
+<body>
+	<br><br><br><br><br>
+	<div id="first">
+		<h1  id='h' font-family="verdana" align="center" style="font-size: 40px;color: white; margin: 0;">Venkey Music Player<h1>
+		</div>
+	<!--<div id="second" class="second">
+
+		<button onclick="myFunction()">
+	</div>
+	-->
+
+	<script src="code.js"></script>
+
+		<div id="queue"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Queue<input type="button" id="next" onclick="nextsong()"><hr></div>
+
+	<div id="third">
+		<div id="emoji"></div>
+		<div id="xyz">
+		&nbsp;&nbsp;&nbsp;Playing :&nbsp;&nbsp;
+		<label id="sname" align="center">none</label></div>
+		<div id="mod">mode : Queue-mode <input type="radio" name="mode" checked="checked" onclick="setmod(this)" value="1"> &nbsp;&nbsp;Emotion-mode <input type="radio" name="mode" onclick="setmod(this)" value="2"> &nbsp;&nbsp;Random-mode 
+			<input type="radio" name="mode" onclick="setmod(this)" value="3"></div>
+		<audio controls id="main_slider">
+  		<source id="sel"  type="audio/mpeg">
+Your browser does not support the audio element.
+		</audio>
+
+		<script>
+	document.getElementById("main_slider").onended=function(){
+		if(mod==1)
+			next_in_Q();
+		else if(mod==2){
+			getTime();
+		}
+		else
+			rand_play();
+
+	};
+
+
+		</script>
+		
+	 
+		</div>
+		</body>
+</html>
